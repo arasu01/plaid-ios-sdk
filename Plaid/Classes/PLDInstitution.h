@@ -23,6 +23,9 @@
 @property(nonatomic, readonly) BOOL hasMfa;
 @property(nonatomic, readonly) NSArray *mfaOptions;
 @property(nonatomic, readonly) UIImage *logoImage;
+@property(nonatomic, readonly) NSString *userName;
+@property(nonatomic, readonly) NSString *password;
+@property(nonatomic, readonly) NSArray *products;
 
 /**
  The background color that represents the institutions color scheme.
