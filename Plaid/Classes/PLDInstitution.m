@@ -18,6 +18,10 @@
     _type = dictionary[@"type"];
     _hasMfa = [dictionary[@"has_mfa"] boolValue];
     _mfaOptions = dictionary[@"mfa"];
+    _products = dictionary[@"products"];
+    NSDictionary *credentialsDict = dictionary[@"credentials"];
+    _userName = credentialsDict[@"username"];
+    _password = credentialsDict[@"password"];
   }
   return self;
 }
