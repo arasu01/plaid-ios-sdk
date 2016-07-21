@@ -11,8 +11,14 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
   if (self = [super init]) {
-    _availableAmount = [dictionary[@"available"] floatValue];
-    _currentAmount = [dictionary[@"current"] floatValue];
+      if (dictionary[@"available"] != nil && dictionary[@"available"] != [NSNull null]) {
+          _availableAmount = [dictionary[@"available"] floatValue];
+      }
+    
+      if (dictionary[@"current"] != nil && dictionary[@"current"] != [NSNull null]) {
+          _currentAmount = [dictionary[@"current"] floatValue];
+      }
+    
     _limit = [dictionary[@"limit"] floatValue];
   }
   return self;

@@ -212,6 +212,7 @@ static NSString * LinkHostForEnvironment(PlaidEnvironment environment) {
     @"password": password,
     @"product": NSStringFromPlaidProduct(product),
     @"public_key": _publicKey,
+    @"longtail": @(YES)
   }];
   if (options[@"webhook"]) {
     parameters[@"webhook"] = options[@"webhook"];
